@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row" style="min-height: 100%; overflow: auto">
+    <div fxLayout="row" [style.margin-bottom]="'4px'">
+      <mat-toolbar>
+        <div
+          fxLayout="row"
+          style="
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+          "
+        >
+          <span>Books</span>
+        </div>
+      </mat-toolbar>
+    </div>
+    <div class="row" style="overflow: scroll">
+      <div
+        style="display: inline-block; padding: 20px"
+        *ngFor="let item of books"
+      >
+        <mat-card style="max-width: 400px">
+          <mat-card-header>
+            <mat-card-title>{{ item.book_Name }}</mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <div style="padding: 4px; align-items: center">
+              <p>Author Name: {{ item.author_Name }}</p>
+              <p>Publish-Date: {{ item.publish_Date }}</p>
+              <small>Pages: {{ item.pages }}</small>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div *ngIf="books.length == 0" class="norecord">
+        No Books Found
+      </div>
+    </div>
+  </div>
+</div>

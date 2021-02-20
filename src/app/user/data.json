@@ -1,0 +1,66 @@
+[
+  {
+    "index": "1",
+    "book_Name": "Politics of Opportunism",
+    "author_Name": "R P N Singh",
+    "pages": "200",
+    "publish_Date": "10/01/1980",
+    "ischecked": false
+  },
+  {
+    "index": "2",
+    "book_Name": "The Testaments",
+    "author_Name": "Margaret Atwood",
+    "pages": "400",
+    "publish_Date": "12/04/2000",
+    "ischecked": false
+  },
+  {
+    "index": "3",
+    "book_Name": "Cheque book",
+    "author_Name": "Vasdev Mohi",
+    "pages": "600",
+    "publish_Date": "02/02/1980",
+    "ischecked": false
+  },
+  {
+    "index": "4",
+    "book_Name": "Shri N Chandrasekaran",
+    "author_Name": "Bridgital Nation",
+    "pages": "100",
+    "publish_Date": "13/09/2002",
+    "ischecked": false
+  },
+  {
+    "index": "5",
+    "book_Name": "Modern Medicine",
+    "author_Name": "Roopa Pai",
+    "pages": "400",
+    "publish_Date": "20/12/2004",
+    "ischecked": false
+  },
+  {
+    "index": "6",
+    "book_Name": "Sridevi: Girl Woman Superstar",
+    "author_Name": "Satyarth Nayak",
+    "pages": "100",
+    "publish_Date": "05/03/2005",
+    "ischecked": false
+  },
+  {
+    "index": "7",
+    "book_Name": "Vivekadeepini",
+    "author_Name": "Adi Shankaracharya",
+    "pages": "250",
+    "publish_Date": "10/04/2003",
+    "ischecked": false
+  },
+  {
+    "index": "8",
+    "book_Name": "Lessons Life Taught Me Unknowingly",
+    "author_Name": "Anupam Kher",
+    "pages": "800",
+    "publish_Date": "05/05/2020",
+    "ischecked": false
+  }
+]

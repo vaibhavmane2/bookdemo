@@ -1,0 +1,101 @@
+<div
+  fxLayout="row"
+  [style.margin-left]="'10px'"
+  [style.margin-right]="'20px'"
+  style="overflow: scroll; height: calc(100% - 100px);border-right: 1px solid lightblue;"
+>
+  <div fxLayout="column" fxFlex="100">
+    <div fxLayout="row">
+      <button mat-flat-button color="primary" (click)="clearAll()">
+        Clear All
+      </button>
+    </div>
+    <div fxLayout="row">
+      <!-- <input type="text" placeholder="Search" style="width: 100%;padding: 5px;box-sizing: border-box;"> -->
+      <mat-form-field
+        class="example-full-width"
+        style="width: 100%; padding: 5px; box-sizing: border-box"
+      >
+        <mat-label>Search</mat-label>
+        <input
+          (input)="searchTextChange($event.target.value)"
+          matInput
+          placeholder="Search ex. name/author/pagecount"
+        />
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" style="height: 100vh; overflow: scroll">
+      <h3>FILTERS</h3>
+      <h4>AUTHORS:</h4>
+      <div
+        fxLayout="row"
+        style="overflow: scroll; height: 23%; background: whitesmoke"
+      >
+        <div fxflex="100" *ngFor="let item of items">
+          <section
+            class="example-section"
+            style="width: 100%; padding: 5px; box-sizing: border-box"
+          >
+            <mat-checkbox
+              [(ngModel)]="item.ischecked"
+              (change)="selectedItem($event.checked, item.author_Name)"
+              class="example-margin"
+              >{{ item.author_Name }}</mat-checkbox
+            >
+          </section>
+        </div>
+      </div>
+      <h4 style="margin-top: 3px;">BOOKS:</h4>
+      <div
+        fxLayout="row"
+        style="overflow: scroll; height: 23%; background: whitesmoke"
+      >
+        <div fxflex="100" *ngFor="let obj of items2">
+          <section
+            class="example-section"
+            style="width: 100%; padding: 5px; box-sizing: border-box"
+          >
+            <mat-checkbox
+              [(ngModel)]="obj.ischecked"
+              (change)="selectedItem($event.checked, obj.book_Name)"
+              class="example-margin"
+              >{{ obj.book_Name }}</mat-checkbox
+            >
+          </section>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <div fxflex="100" style="padding: 10px;">
+          <h4>PAGE COUNT(min-max range):</h4>
+          <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            min="100"
+            max="1000"
+            (change)="matChangedValue($event.value)"
+            style="width: 100%; box-sizing: border-box"
+          ></mat-slider>
+        </div>
+        <div fxflex="100">
+          <mat-form-field
+            appearance="fill"
+            style="width: 100%; padding: 5px; box-sizing: border-box"
+          >
+            <mat-label>Choose a date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              (dateInput)="onDate($event)"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
